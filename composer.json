@@ -2,9 +2,12 @@
 	"name": "mikulas/nette-google-oauth2",
 	"description": "minimalistic Google OAuth2 api",
 	"authors": [{"name": "Mikulas Dite"}],
-	"license": ["BSD-3"],
+	"license": ["GithubShare Enhanced New BSD License (https://gist.github.com/3423760)"],
 	"require": {
 		"php": ">=5.4",
 		"nette/nette": ">=2.0"
+	},
+	"autoload": {
+		"files": ["Google.php"]
 	}
 }
