@@ -2,7 +2,6 @@
 
 use \Nette\Utils\Json;
 
-
 /**
  * Minimalistic Google OAuth2 connector
  * @author Mikuláš Dítě
@@ -42,6 +41,10 @@ class Google extends Nette\Object
 			'scope' => implode(' ', $args['scope']),
 			//'approval_prompt' => 'force',
 		];
+
+		if (isset($args['state'])) {
+			$query['state'] = $args['state'];
+		}
 
 		return self::URL_AUTH . '?' . http_build_query($query);
 	}
